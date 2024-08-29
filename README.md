@@ -17,7 +17,7 @@ Este projeto utiliza Vagrant para criar uma máquina virtual (VM) e configurar u
 1. **Clone este repositório**:
 
     ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
+    git clone https://github.com/AlanBReis/JogoDaMemoriaJS.git
     cd seu-repositorio
     ```
 
@@ -57,3 +57,13 @@ sudo cp -R * /var/www/html
 echo "Exibindo IP atual do servidor"
 ip a
 ```
+
+`Vagrantfile`
+
+O Vagrantfile deve estar configurado para provisionar a VM e executar o script setup.sh. Aqui está um exemplo básico:
+
+```Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64"
+
+  config.vm.provision "shell", path: "scripts/setup.sh"
+end ```

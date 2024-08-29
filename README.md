@@ -66,4 +66,4 @@ O Vagrantfile deve estar configurado para provisionar a VM e executar o script s
   config.vm.box = "ubuntu/bionic64"
 
   config.vm.provision "shell", path: "scripts/setup.sh"
-end ```
+end
